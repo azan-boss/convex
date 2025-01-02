@@ -8,9 +8,6 @@ export const get = query({
 });
 
 
-
-
-
 export const addTask = mutation({
   handler: async (ctx, { text }) => {
     await ctx.db.insert("tasks", { text, isCompleted: false });
